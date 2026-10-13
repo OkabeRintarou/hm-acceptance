@@ -1,0 +1,30 @@
+:root { color-scheme: dark; font-family: system-ui, sans-serif; background: #101b18; color: #eef4e7; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(ellipse at top, #233c30, #101b18 65%); }
+main { width: min(100% - 32px, 520px); margin: 40px auto; }
+header { margin-bottom: 24px; }
+.eyebrow { font-size: 11px; letter-spacing: .22em; color: #aac0ab; }
+h1 { font-size: 64px; margin: 5px 0; letter-spacing: -.07em; line-height: 1.1; }
+h1 span { color: #caf274; }
+header p { color: #a7baaf; margin: 12px 0; }
+.game { padding: 20px; border: 1px solid #3b5143; background: #182820; border-radius: 22px; box-shadow: 0 24px 60px #0004; }
+.stats { display: flex; justify-content: space-between; font-size: 11px; letter-spacing: .12em; color: #a7baaf; padding: 0 4px 16px; }
+.stats strong { display: block; color: #eef4e7; font-size: 28px; letter-spacing: 0; margin-top: 2px; }
+.board { position: relative; border-radius: 12px; overflow: hidden; background: #0e1914; }
+canvas { width: 100%; height: auto; display: block; }
+#overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #0e1914cc; text-align: center; padding: 16px; pointer-events: none; }
+#overlay[hidden] { display: none; }
+h2 { font-size: 26px; margin: 0 0 8px; }
+#overlay p { color: #b4c5b8; margin: 0; }
+.actions { display: flex; gap: 10px; margin-top: 16px; }
+button { border: 1px solid #486048; border-radius: 10px; font: inherit; font-weight: 650; padding: 12px 16px; background: #283c2d; color: #eef4e7; cursor: pointer; touch-action: manipulation; }
+button:hover { filter: brightness(1.15); }
+button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+button:disabled { opacity: .4; cursor: default; }
+#start { flex: 1; background: #caf274; color: #192414; border-color: #caf274; }
+.direction-pad { text-align: center; margin-top: 16px; }
+.direction-pad button { min-width: 52px; margin: 3px; font-size: 20px; padding: 8px; }
+footer { text-align: center; font-size: 12px; line-height: 1.9; color: #9ab09f; margin-top: 22px; }
+footer span { padding: 0 8px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+@media (max-width: 480px) { main { margin: 24px auto; } .game { padding: 12px; } h1 { font-size: 52px; } }

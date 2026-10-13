@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snake — a little arcade break</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header><span class="eyebrow">A LITTLE ARCADE BREAK</span><h1>Snake<span>.</span></h1>
+      <p>Eat, grow, and keep moving.</p></header>
+    <section class="game" aria-label="Snake game">
+      <div class="stats"><div>SCORE <strong id="score">0</strong></div><div>BEST <strong id="best">0</strong></div></div>
+      <div class="board">
+        <canvas id="board" width="600" height="600" aria-label="Snake playing field. Use arrow keys or W A S D to move."></canvas>
+        <div id="overlay"><h2 id="title">Ready to roll?</h2><p id="message">Grab a snack. Watch your tail.</p></div>
+      </div>
+      <p id="status" class="sr-only" role="status" aria-live="polite">Ready to play</p>
+      <div class="actions"><button id="start">Start game</button><button id="pause" disabled>Pause</button></div>
+      <div class="direction-pad" aria-label="Direction controls">
+        <button data-direction="up" aria-label="Move up">↑</button>
+        <div><button data-direction="left" aria-label="Move left">←</button><button data-direction="down" aria-label="Move down">↓</button><button data-direction="right" aria-label="Move right">→</button></div>
+      </div>
+    </section>
+    <footer>Arrow keys / WASD to steer <span>·</span> Space to pause<br>Stay inside the board and avoid your tail.</footer>
+  </main>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>
