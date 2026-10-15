@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>贪吃蛇</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>🐍 贪吃蛇</h1>
+    <div class="bar">
+      <span>得分 <b id="score">0</b></span>
+      <span>最高分 <b id="best">0</b></span>
+      <label>速度
+        <select id="speed">
+          <option value="170">慢</option>
+          <option value="120" selected>中</option>
+          <option value="75">快</option>
+        </select>
+      </label>
+    </div>
+    <div class="board-wrap">
+      <canvas id="board"></canvas>
+      <div id="overlay">
+        <p id="overlay-msg"></p>
+        <button id="start" type="button">开始游戏</button>
+      </div>
+    </div>
+    <div class="pad" aria-label="方向按钮">
+      <button type="button" data-dir="up">▲</button>
+      <button type="button" data-dir="left">◀</button>
+      <button type="button" data-dir="down">▼</button>
+      <button type="button" data-dir="right">▶</button>
+    </div>
+    <p class="hint">方向键 / WASD 控制 · 空格 开始/暂停 · 撞墙或咬到自己即失败</p>
+  </main>
+  <script src="snake-logic.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
